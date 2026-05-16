@@ -20,15 +20,23 @@ def main() -> None:
     if not HF_TOKEN or not SPACE_REPO:
         raise RuntimeError("Set HF_TOKEN and HF_SPACE_REPO before pushing to a Hugging Face Space.")
 
+    # Guard: confirm model files exist before attempting upload
+    model_path = PROJECT_ROOT / "models" / "best_model.joblib"
+    metadata_path = PROJECT_ROOT / "models" / "model_metadata.json"
+    if not model_path.exists():
+        raise FileNotFoundError(
+            f"Model not found at {model_path}. "
+            "Ensure src/04_model_training.py ran successfully before this step."
+        )
+
     api = HfApi(token=HF_TOKEN)
     api.create_repo(repo_id=SPACE_REPO, repo_type="space", space_sdk="docker", exist_ok=True)
 
-    # Uploading files to the root of the repo so Dockerfile can find them easily
     upload(PROJECT_ROOT / "deployment" / "app.py", "app.py", api)
     upload(PROJECT_ROOT / "deployment" / "requirements.txt", "requirements.txt", api)
     upload(PROJECT_ROOT / "deployment" / "Dockerfile", "Dockerfile", api)
-    upload(PROJECT_ROOT / "models" / "best_model.joblib", "models/best_model.joblib", api)
-    upload(PROJECT_ROOT / "models" / "model_metadata.json", "models/model_metadata.json", api)
+    upload(model_path, "models/best_model.joblib", api)
+    upload(metadata_path, "models/model_metadata.json", api)
     print(f"Uploaded Streamlit deployment files to Hugging Face Space: {SPACE_REPO}")
 
 if __name__ == "__main__":
