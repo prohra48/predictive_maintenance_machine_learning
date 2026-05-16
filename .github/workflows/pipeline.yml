@@ -43,7 +43,6 @@ jobs:
       - name: Generate report and notebook HTML
         run: |
           python src/05_generate_report.py
-          python src/06_generate_notebook.py
 
       - name: Upload generated artifacts
         uses: actions/upload-artifact@v4
