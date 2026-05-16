@@ -7,10 +7,11 @@ WORKDIR /app
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
-COPY app.py /app/app.py
-COPY models/best_model.joblib /app/models/best_model.joblib
-COPY models/model_metadata.json /app/models/model_metadata.json
+COPY . .
 
-EXPOSE 8501
+EXPOSE 7860
 
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "app.py", \
+     "--server.port=7860", \
+     "--server.address=0.0.0.0", \
+     "--server.headless=true"]
