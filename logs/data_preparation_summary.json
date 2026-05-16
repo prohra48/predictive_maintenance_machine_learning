@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-05-16T10:11:01.700153+00:00",
+  "clean_rows": 19535,
+  "clean_columns": 7,
+  "train_rows": 15628,
+  "test_rows": 3907,
+  "test_size": 0.2,
+  "target_train_distribution": {
+    "1": 0.6305,
+    "0": 0.3695
+  },
+  "target_test_distribution": {
+    "1": 0.6304,
+    "0": 0.3696
+  },
+  "hugging_face_dataset_status": "uploaded clean/train/test datasets to Hugging Face dataset repo: prohra48/predictive-maintenance-engine-data"
+}

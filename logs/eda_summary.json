@@ -1,0 +1,58 @@
+{
+  "rows": 19535,
+  "columns": 7,
+  "missing_values": 0,
+  "duplicates": 0,
+  "target_distribution": [
+    {
+      "engine_condition": 0,
+      "records": 7218,
+      "percentage": 36.95
+    },
+    {
+      "engine_condition": 1,
+      "records": 12317,
+      "percentage": 63.05
+    }
+  ],
+  "outlier_counts_iqr": {
+    "engine_rpm": 464,
+    "lub_oil_pressure": 66,
+    "fuel_pressure": 1135,
+    "coolant_pressure": 785,
+    "lub_oil_temp": 2617,
+    "coolant_temp": 2
+  },
+  "feature_means_by_condition": {
+    "0": {
+      "engine_rpm": 885.0,
+      "lub_oil_pressure": 3.22,
+      "fuel_pressure": 6.24,
+      "coolant_pressure": 2.37,
+      "lub_oil_temp": 78.02,
+      "coolant_temp": 78.8
+    },
+    "1": {
+      "engine_rpm": 736.3,
+      "lub_oil_pressure": 3.35,
+      "fuel_pressure": 6.9,
+      "coolant_pressure": 2.32,
+      "lub_oil_temp": 77.42,
+      "coolant_temp": 78.21
+    }
+  },
+  "correlations_with_target": {
+    "engine_rpm": -0.268,
+    "fuel_pressure": 0.116,
+    "lub_oil_temp": -0.094,
+    "lub_oil_pressure": 0.061,
+    "coolant_temp": -0.046,
+    "coolant_pressure": -0.024
+  },
+  "figures": [
+    "figure_01_target_distribution.png",
+    "figure_02_feature_histograms.png",
+    "figure_03_boxplots_by_condition.png",
+    "figure_04_correlation_heatmap.png"
+  ]
+}

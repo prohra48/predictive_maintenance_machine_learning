@@ -1,0 +1,66 @@
+{
+  "timestamp_utc": "2026-05-16T10:26:46.591434+00:00",
+  "best_model": "AdaBoost",
+  "best_params": {
+    "model__learning_rate": 0.05,
+    "model__n_estimators": 150
+  },
+  "test_metrics": {
+    "model": "AdaBoost",
+    "accuracy": 0.654,
+    "precision": 0.6537,
+    "recall": 0.9594,
+    "f1": 0.7776,
+    "roc_auc": 0.6839,
+    "best_cv_f1": 0.7743,
+    "best_params": "{\"model__learning_rate\": 0.05, \"model__n_estimators\": 150}"
+  },
+  "confusion_matrix": [
+    [
+      192,
+      1252
+    ],
+    [
+      100,
+      2363
+    ]
+  ],
+  "feature_importance": [
+    {
+      "feature": "engine_rpm",
+      "importance": 0.884426
+    },
+    {
+      "feature": "fuel_pressure",
+      "importance": 0.091244
+    },
+    {
+      "feature": "lub_oil_temp",
+      "importance": 0.02433
+    },
+    {
+      "feature": "lub_oil_pressure",
+      "importance": 0.0
+    },
+    {
+      "feature": "coolant_pressure",
+      "importance": 0.0
+    },
+    {
+      "feature": "coolant_temp",
+      "importance": 0.0
+    }
+  ],
+  "training_rows": 15628,
+  "testing_rows": 3907,
+  "target_column": "engine_condition",
+  "feature_columns": [
+    "engine_rpm",
+    "lub_oil_pressure",
+    "fuel_pressure",
+    "coolant_pressure",
+    "lub_oil_temp",
+    "coolant_temp"
+  ],
+  "hugging_face_model_status": "uploaded best model to Hugging Face model repo: prohra48/predictive-maintenance-engine-model"
+}

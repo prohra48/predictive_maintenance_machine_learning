@@ -1,0 +1,8 @@
+,engine_rpm,lub_oil_pressure,fuel_pressure,coolant_pressure,lub_oil_temp,coolant_temp,engine_condition
+engine_rpm,1.0,0.025,-0.002,-0.025,0.052,0.03,-0.268
+lub_oil_pressure,0.025,1.0,0.044,-0.009,-0.008,-0.061,0.061
+fuel_pressure,-0.002,0.044,1.0,0.033,-0.025,-0.043,0.116
+coolant_pressure,-0.025,-0.009,0.033,1.0,-0.021,0.033,-0.024
+lub_oil_temp,0.052,-0.008,-0.025,-0.021,1.0,0.073,-0.094
+coolant_temp,0.03,-0.061,-0.043,0.033,0.073,1.0,-0.046
+engine_condition,-0.268,0.061,0.116,-0.024,-0.094,-0.046,1.0

@@ -1,0 +1,9 @@
+{
+  "timestamp_utc": "2026-05-16T10:10:29.425593+00:00",
+  "raw_file": "/content/drive/MyDrive/Colab Notebooks/predictive_maintenance_capstone/data/raw/engine_data.csv",
+  "rows": 19535,
+  "columns": 7,
+  "missing_values": 0,
+  "duplicates_after_cleaning": 0,
+  "hugging_face_dataset_status": "uploaded to Hugging Face dataset repo: prohra48/predictive-maintenance-engine-data"
+}
